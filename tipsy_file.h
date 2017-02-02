@@ -195,7 +195,7 @@ public:
 			if(swap_endian)
 			{
 				gas_particle* pp = sph;
-				for(unsigned i = 0; i < h.nsph; i++, pp++)
+				for(int i = 0; i < h.nsph; i++, pp++)
 				{
 					for(unsigned j = 0; j < sizeof(gas_particle)/sizeof(float); j++)
 						byteswap(&((float*)pp)[j]);
@@ -211,7 +211,7 @@ public:
 			if(swap_endian)
 			{
 				dark_particle* pp = dark;
-				for(unsigned i = 0; i < h.ndark; i++, pp++)
+				for(int i = 0; i < h.ndark; i++, pp++)
 				{
 					for(unsigned j = 0; j < sizeof(dark_particle)/sizeof(float); j++)
 						byteswap(&((float*)pp)[j]);
@@ -226,7 +226,7 @@ public:
 			if(swap_endian)
 			{
 				star_particle* pp = star;
-				for(unsigned i = 0; i < h.nstar; i++, pp++)
+				for(int i = 0; i < h.nstar; i++, pp++)
 				{
 					for(unsigned j = 0; j < sizeof(star_particle)/sizeof(float); j++)
 						byteswap(&((float*)pp)[j]);
